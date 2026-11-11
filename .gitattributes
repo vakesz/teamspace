@@ -1,0 +1,11 @@
+* text=auto eol=lf
+
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+
+# Fuzz seeds are raw bytes (HTTP requests need CRLF).
+fuzz/seeds/** binary
+fuzz/dicts/** binary

@@ -1,0 +1,12 @@
+Copyright (c) 2026 Gabor Pinkova. All rights reserved.
+
+No licence is granted to use, copy, modify or distribute this software except
+with the written permission of the copyright holder.
+
+Third-party components keep their own licences:
+
+  - Inter font: SIL Open Font License 1.1 (assets/fonts/OFL.txt)
+  - Fluent UI System Icons: MIT (assets/icons/LICENSE)
+
+Rust dependencies are licensed by their respective authors under the terms
+listed in their crates.

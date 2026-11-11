@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <title>Teamspace</title>
+  <rect width="1024" height="1024" rx="228" fill="#5B5FC7"/>
+  <!-- Back bubble: tinted, upper left, tail down-left. -->
+  <g fill="#DDE0FA">
+    <rect x="176" y="196" width="460" height="352" rx="116"/>
+    <path d="M262 530 L226 650 L372 548 Z" stroke="#DDE0FA" stroke-width="24" stroke-linejoin="round"/>
+  </g>
+  <!-- Front bubble: white, lower right, tail down-right, set off by a brand-colour gap. -->
+  <g fill="#5B5FC7" stroke="#5B5FC7" stroke-width="72" stroke-linejoin="round">
+    <path d="M690 730 L766 852 L622 730 Z"/>
+    <rect x="388" y="388" width="460" height="352" rx="116"/>
+  </g>
+  <g fill="#FFFFFF" stroke="#FFFFFF" stroke-width="20" stroke-linejoin="round">
+    <path d="M690 730 L762 842 L630 730 Z"/>
+    <rect x="388" y="388" width="460" height="352" rx="116" stroke="none"/>
+  </g>
+</svg>

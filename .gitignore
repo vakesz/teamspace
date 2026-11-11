@@ -1,0 +1,26 @@
+# macOS
+.DS_Store
+
+# Rust build output
+target/
+
+# Project-local Rust toolchain and crate cache
+.cargo/
+.rustup/
+
+# Generated visual verification. The screenshot command replaces a single
+# local artifact; generated history does not belong in source control.
+artifacts/
+
+# Snapshot-test scratch output next to the committed goldens
+tests/snapshots/**/*.new.png
+tests/snapshots/**/*.diff.png
+tests/snapshots/**/*.old.png
+
+# Editor settings
+.vscode/
+
+# Logs and editor temp files
+*.log
+*.swp
+*~

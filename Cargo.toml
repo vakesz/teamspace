@@ -1,0 +1,74 @@
+[package]
+name = "teamspace"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.90"
+publish = false
+license-file = "LICENSE"
+description = "Native Rust desktop collaboration workspace inspired by Teams"
+repository = "https://github.com/vakesz/teamspace"
+
+[lib]
+path = "src/lib.rs"
+doctest = false
+
+[[bin]]
+name = "teamspace"
+path = "src/main.rs"
+test = false
+doc = false
+
+[dependencies]
+eframe = { version = "0.33", default-features = true }
+egui_extras = { version = "0.33", features = ["image", "svg"] }
+image = { version = "0.25", default-features = false, features = ["bmp", "gif", "jpeg", "png", "webp"] }
+base64 = "0.22"
+getrandom = "0.3"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+sha2 = "0.10"
+zeroize = "1"
+rfd = { version = "0.17.2", default-features = false }
+reqwest = { version = "0.12", default-features = false, features = ["blocking", "rustls-tls-webpki-roots"] }
+url = "2"
+# Local-time display of Microsoft 365 timestamps (src/shared/local_time.rs). Minimal
+# features: the system zone and the OS zoneinfo database; Windows has no zoneinfo, so
+# it bundles the platform database.
+jiff = { version = "0.2", default-features = false, features = ["std", "tz-system", "tzdb-zoneinfo"] }
+egui_kittest = { version = "=0.33.3", features = ["eframe", "wgpu", "snapshot"], optional = true }
+# OS notifications (opt-in feature). The pure-Rust zbus backend on Linux needs no
+# system library; default features (images, dbus) stay off.
+notify-rust = { version = "4.18", default-features = false, features = ["z"], optional = true }
+
+# rfd's build script panics on Linux without a backend; xdg-portal needs no system library.
+[target.'cfg(target_os = "linux")'.dependencies]
+rfd = { version = "0.17.2", default-features = false, features = ["xdg-portal"] }
+
+[target.'cfg(unix)'.dependencies]
+libc = "0.2"
+
+[target.'cfg(windows)'.dependencies]
+jiff = { version = "0.2", default-features = false, features = ["tzdb-bundle-platform"] }
+
+[features]
+# Off-screen real-UI screenshot: `cargo run --features screenshot -- --screenshot`.
+screenshot = ["dep:egui_kittest"]
+# Golden-image tests of the real UI (`cargo test --features ui-snapshots`); see CONTRIBUTING.md.
+ui-snapshots = ["screenshot"]
+# System notifications, only under a truthful app identity (see src/app/os_notify.rs).
+os-notifications = ["dep:notify-rust"]
+# Exposes the `teamspace::fuzz` entry points used by the separate `fuzz/` crate.
+fuzzing = []
+
+[dev-dependencies]
+egui_kittest = { version = "=0.33.3", features = ["eframe"] }
+
+[profile.dev.package."*"]
+opt-level = 2
+
+[profile.release]
+lto = "thin"
+codegen-units = 1
+strip = "symbols"
+# No `panic = "abort"`: the remote worker thread's panic must unwind so the
+# transport sees a disconnected channel and falls back to local preview.

@@ -1,0 +1,53 @@
+[package]
+name = "teamspace-fuzz"
+version = "0.0.0"
+edition = "2024"
+publish = false
+
+[package.metadata]
+cargo-fuzz = true
+
+[dependencies]
+libfuzzer-sys = "0.4"
+teamspace = { path = "..", features = ["fuzzing"] }
+
+# Separate workspace: the fuzz crate needs nightly and must not join the app's.
+[workspace]
+
+[profile.release]
+debug = 1
+
+[[bin]]
+name = "loopback_callback"
+path = "fuzz_targets/loopback_callback.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "graph_page"
+path = "fuzz_targets/graph_page.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "message_body"
+path = "fuzz_targets/message_body.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "next_link"
+path = "fuzz_targets/next_link.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "stored_snapshot"
+path = "fuzz_targets/stored_snapshot.rs"
+test = false
+doc = false
+bench = false

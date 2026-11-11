@@ -1,0 +1,30 @@
+{
+  "organization": "Juniper Row Studio",
+  "current_user": "Casey Marlowe",
+  "chat": {
+    "day_label": "Today",
+    "favorites": [
+      { "id": "favorite-ines-barros", "name": "Ines Barros", "preview": "You: here's the trail photo from Sunday", "time": "09. 18.", "initials": "IB", "color": [219, 190, 165], "unread": false, "subtitle": "Available" },
+      { "id": "favorite-casey-marlowe", "name": "Casey Marlowe (You)", "preview": "You: https://example.com/packing-list", "time": "10. 19.", "initials": "CM", "color": [151, 184, 169], "unread": false, "subtitle": "Available" },
+      { "id": "favorite-tomasz-berglund", "name": "Tomasz Berglund", "preview": "Friday afternoon is fine by me, thanks", "time": "05. 12.", "initials": "TB", "color": [165, 187, 204], "unread": false, "subtitle": "Available" },
+      { "id": "favorite-selma-duvall", "name": "Selma Duvall", "preview": "You: https://example.com/invite/k7Qm…", "time": "10. 08.", "initials": "SD", "color": [205, 161, 185], "unread": false, "subtitle": "Available" }
+    ],
+    "conversations": [
+      { "id": "chat-wren-castellanos", "name": "Wren Castellanos", "preview": "You: https://example.com/gallery/chairs…", "time": "14:08", "initials": "WC", "color": [219, 190, 165], "unread": true, "subtitle": "Available" },
+      { "id": "chat-dara-whitlock", "name": "Dara Whitlock", "preview": "You: Book the van for Thursday morning", "time": "13:41", "initials": "DW", "color": [151, 184, 169], "unread": true, "subtitle": "Available" },
+      { "id": "chat-saturday-market-crew", "name": "Saturday Market Crew", "preview": "Wren: Stall rota is up, please check your slot…", "time": "11:47", "initials": "SM", "color": [205, 205, 211], "unread": false, "subtitle": "Group chat" },
+      { "id": "chat-book-corner-team", "name": "Book Corner Team", "preview": "Dara: Next month's pick is a short novel…", "time": "11. 01.", "initials": "BC", "color": [165, 187, 204], "unread": false, "subtitle": "Team · General" },
+      { "id": "chat-packaging-walkthrough", "name": "Packaging Line Walkthrough", "preview": "Notes are in the shared folder", "time": "10. 30.", "initials": "PL", "color": [120, 130, 201], "unread": false, "subtitle": "Meeting chat" },
+      { "id": "chat-rhys-calloway", "name": "Rhys Calloway", "preview": "Small orders went the same way for me…", "time": "10. 29.", "initials": "RC", "color": [205, 161, 185], "unread": false, "subtitle": "Available" },
+      { "id": "chat-isla-jonas-keira", "name": "Isla, Jonas, Keira, +14", "preview": "Keira: Cake was gone in ten minutes…", "time": "10. 28.", "initials": "IJ", "color": [218, 178, 120], "unread": false, "subtitle": "Group chat" },
+      { "id": "chat-odette-marchetti", "name": "Odette Marchetti", "preview": "Pickup for the cake is booked for noon…", "time": "10. 26.", "initials": "OM", "color": [151, 184, 169], "unread": false, "subtitle": "Available" },
+      { "id": "chat-loading-dock", "name": "Loading Dock Chatter", "preview": "Anselm: Forklift is booked until three today…", "time": "10. 24.", "initials": "LD", "color": [120, 130, 201], "unread": false, "subtitle": "Group chat" }
+    ],
+    "messages": [
+      { "name": "You", "time": "10. 21. 09:36", "text": "attached the draft floor plan for the reading nook, shelf heights can be changed and the outlets are marked in red", "own": true, "attachment": "layout-mockup", "reactions": [{ "kind": "like", "count": 1, "reacted_by_current_user": true }] },
+      { "name": "You", "time": "10. 21. 09:36", "text": "colours are good enough for now, stain samples arrive next week", "own": true, "reactions": [{ "kind": "like", "count": 2 }] },
+      { "name": "Wren Castellanos", "time": "10. 21. 09:52", "text": "That corner by the window will be lovely", "own": false, "reply_context": { "name": "Casey Marlowe", "time": "2026. 10. 21. 09:36" }, "reactions": [{ "kind": "heart", "count": 1 }] },
+      { "name": "You", "time": "14:07", "text": "https://example.com/gallery/chairs", "own": true, "attachment": "spreadsheet", "day_divider_before": true, "reactions": [{ "kind": "like", "count": 1, "reacted_by_current_user": true }] }
+    ]
+  }
+}
